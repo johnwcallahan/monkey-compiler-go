@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/johnwcallahan/monkey-compiler-go/token"
+	"github.com/johnwcallahan/monkey-go/token"
 )
 
 func main() {

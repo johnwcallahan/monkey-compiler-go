@@ -1,6 +1,6 @@
 package lexer
 
-import "github.com/johnwcallahan/monkey-compiler-go/token"
+import "github.com/johnwcallahan/monkey-go/token"
 
 // Lexer ...
 type Lexer struct {
