@@ -2,10 +2,19 @@ package main
 
 import (
 	"fmt"
+	"os"
+	"os/user"
 
-	"github.com/johnwcallahan/monkey-go/token"
+	"github.com/johnwcallahan/monkey-go/repl"
 )
 
 func main() {
-	fmt.Println(token.LookupIdent("fn"))
+	user, err := user.Current()
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Printf("Hello %s! This is the Monkey programming language!\n", user.Username)
+	fmt.Printf("Feel free to type some commands.\n")
+	repl.Start(os.Stdin, os.Stdout)
 }
